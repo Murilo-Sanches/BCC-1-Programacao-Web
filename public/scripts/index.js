@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('a');
   const donationForm = document.getElementById('form');
   const submitBtn = donationForm.querySelector('[type="submit"]');
-  const logo = document.getElementById('logo');
 
   document.querySelector('.footer p span').textContent =
     new Date().getFullYear();
@@ -72,7 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     link.addEventListener('click', (e) => {
-      console.log(href);
+      const isLogo = link.firstElementChild?.tagName.toLowerCase() === 'img';
+
+      if (isLogo) {
+        e.preventDefault;
+
+        scrollToSection(0);
+
+        return;
+      }
 
       if (href === '#') {
         e.preventDefault();
@@ -93,10 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         target.scrollIntoView({ behavior: 'smooth' });
       }
     });
-  });
-
-  logo.addEventListener('click', () => {
-    scrollToSection(0);
   });
 
   donationForm.addEventListener('submit', async (e) => {
