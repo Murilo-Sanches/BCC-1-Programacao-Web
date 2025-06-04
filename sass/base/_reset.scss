@@ -1,0 +1,41 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as variables;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /**
+    * Má prática definir em px, porque vai sobrescrever o tamanho do browser
+    * Se o usuário usar uma porcentagem modificada como padrão (125% como eu) px não vai casar bem
+    * 1rem = 16px : sempre vai ser relativo a fonte do navegador do usuário
+  */
+
+  font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+  @include mixins.resize(tabLand) {
+    font-size: 56.25%; // 1rem = 9px; 9px/16 = 56.25%
+  }
+
+  @include mixins.resize(tabPort) {
+    font-size: 50%; // 1rem = 8px; 8px/16px = 50%
+  }
+
+  @include mixins.resize(bigDesk) {
+    font-size: 75%; // 1rem = 12px; 12px/16px = 75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: variables.$primary;
+  color: variables.$background;
+}

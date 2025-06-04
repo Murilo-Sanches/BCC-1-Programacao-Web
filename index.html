@@ -1,9 +1,216 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sangue Conecta</title>
-    </head>
-    <body></body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoaSangue Conecta</title>
+
+    <link rel="stylesheet" href="./public/styles/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo-link">
+        <img
+          id="logo"
+          class="header__logo"
+          alt="DoaSangue Conecta logo"
+          src="./public/images/logo.png"
+        />
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li>
+            <a class="header__nav-link" href="#">Página Inicial</a>
+          </li>
+          <li>
+            <a class="header__nav-link" href="#">Sobre</a>
+          </li>
+          <li>
+            <a class="header__nav-link" href="#">Solução</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container-scroll">
+        <section
+          class="section-hero container-scroll__section container-scroll__section"
+        >
+          <div class="hero">
+            <div class="hero__text-box">
+              <h1 class="heading-primary">
+                <span>DoaSangue Conecta</span>, salve vidas com um simples
+                gesto.
+              </h1>
+
+              <p class="hero__description">
+                Milhares de pessoas dependem da solidariedade de doadores como
+                você. Uma única doação pode salvar até quatro vidas. Seja a
+                esperança de alguém hoje, para que haja esperança amanhã.
+              </p>
+
+              <a href="#contact-us" class="btn btn--full">Quero doar sangue</a>
+              <a href="#how-to-donate" class="btn btn--outline"
+                >Saiba Mais &darr;</a
+              >
+
+              <div class="hero__donors">
+                <div class="hero__donors-imgs">
+                  <img
+                    src="./public/images/donors/1.jpg"
+                    alt="Foto de um doador de sangue"
+                  />
+                  <img
+                    src="./public/images/donors/2.jpg"
+                    alt="Foto de um doador de sangue"
+                  />
+                  <img
+                    src="./public/images/donors/3.jpg"
+                    alt="Foto de um doador de sangue"
+                  />
+                  <img
+                    src="./public/images/donors/4.jpg"
+                    alt="Foto de um doador de sangue"
+                  />
+                  <img
+                    src="./public/images/donors/5.jpg"
+                    alt="Foto de um doador de sangue"
+                  />
+                  <img
+                    src="./public/images/donors/6.jpg"
+                    alt="Foto de um doador de sangue"
+                  />
+                </div>
+
+                <p class="hero__donors-text">
+                  <span>+3 milhões</span> de bolsas de sangue coletadas por ano
+                  no Brasil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="container-scroll__section container-scroll__section--hero"
+        >
+          <div id="how-to-donate" class="container-scroll__content">
+            <h2 class="heading-secondary u-margin-bottom-medium u-center-text">
+              Por que doar sangue?
+            </h2>
+            <div class="container-scroll__grid">
+              <div class="container-scroll__text">
+                <p>
+                  O sangue é insubstituível e fundamental em situações de
+                  emergência, cirurgias e tratamentos. Cada doação pode salvar
+                  até quatro vidas.
+                </p>
+              </div>
+              <div class="container-scroll__image">
+                <img
+                  src="./public/svgs/1.svg"
+                  alt="Ilustração de Doação de Sangue"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="container-scroll__section container-scroll__section--hero"
+        >
+          <div class="container-scroll__content">
+            <h2 class="heading-secondary u-margin-bottom-medium u-center-text">
+              Como doar?
+            </h2>
+            <div class="container-scroll__grid">
+              <div class="container-scroll__image">
+                <img
+                  src="./public/svgs/2.svg"
+                  alt="Ilustração de Doação de Sangue"
+                />
+              </div>
+              <div class="container-scroll__text">
+                <p>
+                  Procure um hemocentro, esteja bem alimentado, leve um
+                  documento com foto e esteja saudável.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="container-scroll__section container-scroll__section--hero"
+        >
+          <div class="container-scroll__content">
+            <h2 class="heading-secondary u-margin-bottom-medium u-center-text">
+              Sua doação salva vidas
+            </h2>
+            <div class="container-scroll__grid">
+              <div class="container-scroll__text">
+                <p>
+                  Uma única doação de sangue pode salvar até 4 vidas.
+                  Seu gesto faz a diferença!
+                </p>
+              </div>
+              <div class="container-scroll__image">
+                <img
+                  src="./public/svgs/3.svg"
+                  alt="Ilustração de Doação de Sangue"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="container-scroll__section container-scroll__section--form"
+        >
+          <div class="container-scroll__content">
+            <h2
+              id="contact-us"
+              class="heading-secondary u-margin-bottom-medium u-center-text"
+            >
+              Mostre seu interesse em ajudar essa causa!
+            </h2>
+
+            <form id="form" class="form" method="POST">
+              <div class="form__group">
+                <input
+                  type="text"
+                  placeholder="Digite seu nome completo..."
+                  required
+                />
+              </div>
+              <div class="form__group">
+                <input
+                  type="email"
+                  placeholder="Digite seu email..."
+                  required
+                />
+              </div>
+              <div class="form__group">
+                <textarea placeholder="Mensagem" rows="4"></textarea>
+              </div>
+              <div class="form__group u-center-text">
+                <button type="submit" class="btn">Enviar</button>
+              </div>
+            </form>
+          </div>
+
+          <footer class="footer">
+            <p>
+              &copy; <span></span> DoaSangue Conecta. Todos os direitos
+              reservados.
+            </p>
+          </footer>
+        </section>
+      </div>
+    </main>
+
+    <script src="./public/scripts/index.js"></script>
+  </body>
 </html>

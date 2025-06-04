@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as variables;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    select,
+    textarea {
+      padding: 1.2rem;
+      font-size: 1.6rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      outline: none;
+
+      &:focus {
+        border-color: variables.$primary;
+        box-shadow: 0 0 0 3px rgba(variables.$primary, 0.2);
+      }
+    }
+  }
+
+  .btn {
+    background-color: variables.$primary;
+    color: variables.$white;
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: adjust(variables.$primary, 10%);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use '../abstracts/mixins' as mixins;
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem !important;
+
+  @include mixins.resize(tabPort) {
+    margin-bottom: 2rem !important;
+  }
+}

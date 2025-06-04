@@ -1,6 +1,20 @@
-// Ordem: base > typography > general layout > float/grid > page layout > components
-// 1em = 16px : sempre vai ser relativo a fonte do navegador do usuário
+//
+/**
+  * Referências:
+    * Cores: https://www.realtimecolors.com/?colors=1c0007-fff9fa-f0224b-fdc168-fcd73e&fonts=Inter-Inter "Split Complementary"
+    * Naming Convention: https://getbem.com/
+*/
 
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+@use 'base/reset';
+
+@use 'base/typography';
+
+@use 'base/utilities';
+
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/section-scroll';
+@use 'layout/footer';
+
+@use 'components/button';
+@use 'components/form';

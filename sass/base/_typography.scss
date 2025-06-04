@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as variables;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: variables.$text;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 6rem;
+
+  & span {
+    color: variables.$primary;
+  }
+}
+
+.heading-secondary {
+  font-size: 4rem;
+}
